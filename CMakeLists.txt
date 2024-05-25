@@ -1,18 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(data_structure_algorithm)
 
-set(EXECUTABLE_OUTPUT_PATH ../out/)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/out/)
 
-add_executable(
-    linked_list.o
-    ./linked_list/main.c
-    ./linked_list/create.c
-    ./linked_list/push.c
-    ./linked_list/pop.c
-    ./linked_list/insert.c
-    ./linked_list/remove.c
-    ./linked_list/rotate.c
-    ./linked_list/len.c
-    ./linked_list/free.c
-    ./linked_list/logger.c
-)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/linked_list LINKED_LIST_SRC)
+add_executable(linked_list.o ${LINKED_LIST_SRC})
