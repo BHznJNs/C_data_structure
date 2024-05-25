@@ -12,5 +12,7 @@ add_executable(
     ./linked_list/insert.c
     ./linked_list/remove.c
     ./linked_list/rotate.c
+    ./linked_list/len.c
+    ./linked_list/free.c
     ./linked_list/logger.c
 )

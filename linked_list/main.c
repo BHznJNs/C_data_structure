@@ -61,6 +61,18 @@ void rotate_test() {
     // 2: 0
 }
 
+void len_test() {
+    LinkedList* head = init_node();
+    assert(list_len(head) == 3);
+    printf("len: %d\n", list_len(head));
+}
+
+void free_test() {
+    LinkedList* head = init_node();
+    list_free(head);
+    head = NULL;
+}
+
 int main() {
     printf("push_test\n");
     push_test();
@@ -72,4 +84,9 @@ int main() {
     remove_test();
     printf("rotate_test\n");
     rotate_test();
+    printf("len_test\n");
+    len_test();
+    printf("free_test\n");
+    free_test();
+    return 0;
 }
