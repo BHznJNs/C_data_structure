@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
-#include "linked_list.h"
+#include "../src/linked_list/linked_list.h"
 
 LinkedList* init_node() {
     LinkedList* head = node_create(0);
@@ -30,6 +30,14 @@ void pop_test() {
     list_logger(head);
     // 0: 0
     // 1: 1
+}
+
+void get_test() {
+    LinkedList* head = init_node();
+    val_t* head_val   = list_get(head, 0);
+    val_t* gotten_val = list_get(head, 2);
+    assert(*head_val   == 0);
+    assert(*gotten_val == 2);
 }
 
 void insert_test() {
@@ -78,6 +86,8 @@ int main() {
     push_test();
     printf("pop_test\n");
     pop_test();
+    printf("get_test\n");
+    get_test();
     printf("insert_test\n");
     insert_test();
     printf("remove_test\n");

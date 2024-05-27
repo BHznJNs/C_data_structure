@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
-val_t list_pop (LinkedList* head) {
+val_t list_pop(LinkedList* head) {
     LinkedList* node = head;
     while (node->next != NULL && node->next->next != NULL) {
         node = node->next;
