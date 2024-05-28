@@ -9,7 +9,7 @@ typedef struct Stack {
     size_t size;
 } Stack;
 
-Stack  create_stack();
+Stack* create_stack();
 void   stack_push(Stack* stack, void* val);
 void*  stack_pop (Stack* stack);
 void*  stack_peek(Stack* stack);
