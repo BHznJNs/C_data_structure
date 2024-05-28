@@ -2,9 +2,8 @@
 #include "stack.h"
 #include "../linked_list/linked_list.h"
 
-Stack* create_stack() {
-    Stack* stack = (Stack*)malloc(sizeof(Stack));
-    stack->list = node_create(0);
-    stack->size = 0;
+Stack create_stack() {
+    LinkedList* head = node_create(NULL);
+    Stack stack = { head, 0 };
     return stack;
 }
