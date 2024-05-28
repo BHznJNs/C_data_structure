@@ -7,12 +7,7 @@ typedef struct LinkedListIter {
     LinkedList* next;
 } LinkedListIter;
 
-typedef struct LinkedListIterStatus {
-    char  is_done;
-    val_t val;
-} LinkedListIterStatus;
-
-LinkedListIter       list_iter     (LinkedList* head);
-LinkedListIterStatus list_iter_next(LinkedListIter* iter);
+LinkedListIter list_iter     (LinkedList* head);
+void*          list_iter_next(LinkedListIter* iter);
 
 #endif /*_LINKEDLIST_ITER*/

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "linked_list.h"
 
-void list_insert(LinkedList* head, idx_t idx, val_t val) {
+void list_insert(LinkedList* head, idx_t idx, void* val) {
     if (idx == 0) {
-        val_t head_val = head->val;
+        void* head_val = head->val;
         LinkedList* new_node = node_create(head_val);
         new_node->next = head->next;
         head->next = new_node;

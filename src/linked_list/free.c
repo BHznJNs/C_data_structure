@@ -15,6 +15,7 @@ void list_free(LinkedList* head) {
     }
     for (idx_t i=0; i<len; i++) {
         LinkedList* node = node_list[i];
+        free(node->val);
         free(node);
     }
 }

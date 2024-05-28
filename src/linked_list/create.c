@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
-LinkedList* node_create(val_t val) {
-    LinkedList* head = (LinkedList*)malloc(sizeof(LinkedList));
-    head->val = val;
-    head->next = NULL;
-    return head;
+LinkedList* node_create(void* val) {
+    LinkedList* node = (LinkedList*)malloc(sizeof(LinkedList));
+    node->val  = val;
+    node->next = NULL;
+    return node;
 }

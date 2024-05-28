@@ -1,7 +1,7 @@
 #include "stack.h"
 #include "../linked_list/linked_list.h"
 
-void stack_push(Stack* stack, val_t val) {
+void stack_push(Stack* stack, void* val) {
     if (stack->size == 0) {
         stack->list->val = val;
         stack->size = 1;
