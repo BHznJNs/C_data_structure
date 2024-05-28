@@ -4,7 +4,9 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "stack.h": "c",
-        "assert.h": "c"
+        "assert.h": "c",
+        "iterator.h": "c",
+        "*.gitignore": "c"
     },
     "C_Cpp.errorSquiggles": "enabledIfIncludesResolve"
 }

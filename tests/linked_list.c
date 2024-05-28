@@ -69,6 +69,20 @@ void rotate_test() {
     // 2: 0
 }
 
+void iterator_test() {
+    LinkedList* head    = init_node();
+    LinkedListIter iter = list_iter(head);
+    int index = 0;
+    while (1) {
+        LinkedListIterStatus status = list_iter_next(&iter);
+        if (status.is_done == 1) {
+            break;
+        }
+        printf("%d: %d\n", index, status.val);
+        index += 1;
+    }
+}
+
 void len_test() {
     LinkedList* head = init_node();
     assert(list_len(head) == 3);
@@ -94,6 +108,8 @@ int main() {
     remove_test();
     printf("rotate_test\n");
     rotate_test();
+    printf("iterator_test\n");
+    iterator_test();
     printf("len_test\n");
     len_test();
     printf("free_test\n");

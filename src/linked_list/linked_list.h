@@ -20,4 +20,6 @@ idx_t       list_len   (LinkedList* head);
 void        list_free  (LinkedList* head);
 void        list_logger(LinkedList* head);
 
+#include "iterator.h"
+
 #endif /*_LINKED_LIST*/
